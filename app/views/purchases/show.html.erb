@@ -1,0 +1,40 @@
+<h2>Please review you purchase</h2>
+
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <%= image_tag(@purchase.template.image_url) %>
+    </div>
+  </li>
+</ul>
+
+
+<p>
+  Wix user email: <strong><%=@purchase.email%></strong>
+</p>
+<p>
+  Template name: <strong><%=@purchase.template.name%></strong>
+</p>
+
+<p>
+  Price: <strong><%= number_to_currency(@purchase.template.price, :unit => "$") %></strong>
+</p>
+
+<% payment_service_for @purchase.id, Settings.paypal.account,
+        :amount => @purchase.template.price, :currency => 'USD',
+        :service => :paypal do |service|
+
+    service.customer :email => @purchase.email
+
+    service.item_name @purchase.template.name
+
+    # PayPal will POST a callback here when the payment is done
+    service.notify_url notifications_url
+    # PayPal will take your user here with a POST after he pays
+    service.return_url return_notification_url(@purchase)
+    # PayPal will redirect your user here if he cancels the payment
+    service.cancel_return_url cancel_notification_url(@purchase) %>
+    <hr>
+    <%= image_submit_tag("paypal-btn.gif") %>
+
+<% end %>

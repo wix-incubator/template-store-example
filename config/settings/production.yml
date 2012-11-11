@@ -1,0 +1,6 @@
+paypal:
+  account: <%= ENV['PAYPAL_ACCOUNT'] %>
+  sendbox: <%= ENV['PAYPAL_SENDBOX'] %>
+wix_api:
+  secret: <%= ENV['WIX_SECRET_KEY'] %>
+  public: <%= ENV['WIX_PRUBLIC_KEY'] %>

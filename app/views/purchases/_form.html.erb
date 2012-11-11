@@ -1,0 +1,5 @@
+<%= simple_form_for @purchase do |f| %>
+  <%= f.input :email, :label => 'Your wix account email' %>
+  <%= f.input :template_id, :as => :hidden %>
+  <%= f.button :submit, "Buy #{@purchase.template.name}", class: 'btn-primary' %>
+<% end %>

@@ -1,0 +1,12 @@
+<h3>Buy <%= @purchase.template.name %> </h3>
+<h4><%= number_to_currency(@purchase.template.price, :unit => "$") %></h4>
+
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <%= image_tag(@purchase.template.image_url) %>
+    </div>
+  </li>
+</ul>
+
+<%= render 'form' %>

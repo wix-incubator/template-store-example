@@ -1,0 +1,19 @@
+<div class="page-header">
+  <h1>Buy My Beautiful WIX Templates <small>Lowest prices in the world</small></h1>
+</div>
+
+
+<ul class="thumbnails">
+  <% @templates.each do |template| -%>
+  <li class="span4">
+    <div class="thumbnail">
+      <%= image_tag(template.image_url) %>
+      <h3><%= template.name %></h3>
+      <h4><%= number_to_currency(template.price, :unit => "$") %></h4>
+      <%= link_to "Buy #{template.name}",
+          new_purchase_path(template_id: template.id),
+          class: 'btn btn-primary' %>
+    </div>
+  </li>
+  <% end -%>
+</ul>
