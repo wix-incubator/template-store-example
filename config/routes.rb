@@ -1,6 +1,7 @@
 TsExample::Application.routes.draw do
   resources :templates
   resources :purchases
+  resources :wix_users
   resources :notifications do
     member do
       post 'return'

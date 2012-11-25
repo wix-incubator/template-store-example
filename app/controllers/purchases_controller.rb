@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
   def new
-    @purchase = Purchase.new
+    session[:template_id] = params[:template_id]
+    @purchase = Purchase.new(email: session[:wix_user_email])
     @purchase.template = Template.find(params[:template_id])
   end
 
