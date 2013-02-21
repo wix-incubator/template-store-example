@@ -3,8 +3,6 @@ class NotificationsController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => [:create, :return]
 
   def return
-    flash[:notice] = "Thanks for buying #{params[:item_name]}"
-    redirect_to root_path
   end
 
   def cancel

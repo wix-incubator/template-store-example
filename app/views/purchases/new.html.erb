@@ -1,12 +1,30 @@
-<h3>Buy <%= @purchase.template.name %> </h3>
-<h4><%= number_to_currency(@purchase.template.price, :unit => "$") %></h4>
+<%= body_class 'create-account-review-page' %>
+<div class="subheader">
+</div>
 
-<ul class="thumbnails">
-  <li class="span4">
-    <div class="thumbnail">
-      <%= image_tag(@purchase.template.image_url) %>
+<section class="container">
+  <div class="review-purchase">
+    <h3>Please review your purchase</h3>
+    <div class="piece">
+      <div>
+        <div class="info">
+          <div class="preview"><%= template_preview(@purchase.template) %></div>
+          <div class="details">
+            <div class="price"><%= price_tag(@purchase.template.price) %></div>
+            <%= form_for @purchase do |f| %>
+              <label>Your Wix account email:</label>
+              <%= f.email_field(:email) %>
+              <%= errors_for(@purchase.errors, :email) %>
+              <%= f.hidden_field(:template_id) %>
+              <div class="helper">
+                Don't have wix.com account?<br/>
+                No problem, you can <%= link_to 'create one', new_wix_user_path %>
+              </div>
+              <%= f.submit 'Continue', class: 'action' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-  </li>
-</ul>
-
-<%= render 'form' %>
+  </div>
+</section>

@@ -1,19 +1,34 @@
-<div class="page-header">
-  <h1>Buy My Beautiful WIX Templates <small>Lowest prices in the world</small></h1>
-</div>
+<%= body_class 'main-page' %>
 
+<% content_for :header do %>
+  <h2>Find the perfect template for your business and get online today</h2>
+  <p>Make your selection from one of our beautifully designed website templates. All our
+  templates are compatible with Wix, so you can easily edit your template and launch a
+  professional website with no coding or tech knowledge. And once you purchase your template,
+  you'll find it waiting for you to edit inside your Wix account.</p>
+  <p>Please note: hosting for the site you build from this template is free and available to
+  Wix only. To connect a domain or for other premiun features your will need to purchase one
+  of the Wix premium packages.</p>
+  <div class="eye-candy"></div>
+<% end %>
 
-<ul class="thumbnails">
-  <% @templates.each do |template| -%>
-  <li class="span4">
-    <div class="thumbnail">
-      <%= image_tag(template.image_url) %>
-      <h3><%= template.name %></h3>
-      <h4><%= number_to_currency(template.price, :unit => "$") %></h4>
-      <%= link_to "Buy #{template.name}",
-          new_purchase_path(template_id: template.id),
-          class: 'btn btn-primary' %>
-    </div>
-  </li>
-  <% end -%>
-</ul>
+<section class="container">
+  <ul class="templates">
+    <% @templates.each do |template| %>
+    <li class="piece">
+      <div>
+        <%= template_preview(template) %>
+        <div class="caption">
+          <h3><%= template.name %></h3>
+          <p><%= template.description %></p>
+          <div class="actions">
+            <span class="price"><%= price_tag(template.price) %></span>
+            <%= link_to 'View', template.site_url %>
+            <%= link_to 'Buy', new_purchase_path(template_id: template.id) %>
+          </div>
+        </div>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</section>

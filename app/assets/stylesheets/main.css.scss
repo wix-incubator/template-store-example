@@ -1,0 +1,661 @@
+@import 'bootstrap';
+
+$text-color: #E1F2F3;
+$header-color: #ADC100;
+$light-gray-color: #EDEDED;
+$dark-gray-color: #767676;
+$blue-color: #98CEEE;
+$error-color: #B94A48;
+
+.alert {
+  margin-bottom: 0;
+}
+
+a {
+  color: $blue-color;
+  text-decoration: underline;
+}
+
+h3 {
+  color: $header-color;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 37px;
+}
+
+.error {
+  color: $error-color;
+}
+
+.field_with_errors {
+  input[type=email], input[type=text], input[type=password] {
+    border-color: $error-color
+  }
+}
+
+.marketing-point {
+  background-image: -webkit-radial-gradient(top, 450px 85px, #F0F0F0, white);
+  background-image: radial-gradient(top, 450px 85px, #F0F0F0, white);
+  padding-top: 60px;
+}
+
+.subheader {
+  background-color: $light-gray-color;
+  border-width: 4px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  -webkit-border-image: url('/assets/h2_border.png') 4 0 stretch stretch;
+  min-height: 65px;
+
+  h2 {
+    line-height: 65px;
+    padding-left: 10px;
+    margin: 0 auto;
+    width: 940px;
+    font-weight: normal;
+    color: #595959;
+    font-size: 35px;
+  }
+}
+
+.separator {
+  padding: 0;
+  height: 1px;
+  background:   radial-gradient(#C7C7C7, white) repeat scroll 0% 0% transparent;
+  background-image: -webkit-radial-gradient(top, circle cover, #C7C7C7, white);
+}
+
+.button {
+  @extend .btn;
+  background-image: -webkit-linear-gradient(top, #D2DD7A, #ABC000);
+  background-image:    -moz-linear-gradient(top, #D2DD7A, #ABC000);
+  background-image:   linear-gradient(to bottom, #D2DD7A, #ABC000);
+  background-color: #ABC000;
+  border-color: #B0C02B;
+  text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    background-color: #ABC000;
+  }
+}
+
+.main-page {
+  header .container {
+    min-height: 413px;
+    padding-top: 27px;
+  }
+
+  section {
+    margin-top: 67px;
+  }
+}
+
+.thank-you-page {
+  .thank-you {
+    color: $blue-color;
+    margin-top: 85px;
+    margin-left: 120px;
+
+    h3 {
+      color: $blue-color;
+      font-weight: normal;
+    }
+
+    .separator {
+      margin-top: 85px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-top: 3px;
+    }
+  }
+
+  .eye-candy {
+    @extend .marketing-point;
+    height: 85px;
+    padding: 0;
+  }
+}
+
+.about-page {
+  .about {
+    margin-left: 81px;
+    margin-top: 35px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .who, .why {
+      height: 293px;
+    }
+
+    .why {
+      .eye-candy {
+        background-image: url('/assets/About_2.png');
+        width: 347px;
+        height: 212px;
+        bottom: 88px;
+        right: 78px;
+      }
+    }
+  }
+}
+
+.how-it-works-page {
+  section {
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+
+      li {
+        padding-left: 1.5em;
+        text-indent: -1.5em;
+      }
+
+      li:before {
+        content: "\002022";
+        color: #A6Bc00;
+        padding-right: 10px;
+        font-size: 22px;
+      }
+    }
+
+    .advice {
+      color: $blue-color;
+    }
+
+    .what-are-templates-dream {
+      height: 163px;
+
+      .eye-candy {
+        background-image: url('/assets/How_1.png');
+        width: 235px;
+        height: 210px;
+        right: 115px;
+        bottom: 8px;
+      }
+    }
+
+    .what-is-wix {
+      height: 199px;
+      padding-left: 330px;
+
+      .eye-candy {
+        background-image: url('/assets/How_2.png');
+        width: 176px;
+        height: 172px;
+        left: 70px;
+        bottom: 28px;
+      }
+    }
+
+    .what-do-i-get {
+      height: 286px;
+      padding-right: 375px;
+      padding-top: 48px;
+
+      .eye-candy {
+        background-image: url('/assets/How_3.png');
+        width: 141px;
+        height: 301px;
+        right: 133px;
+        bottom: 13px;
+      }
+    }
+
+    .what-now {
+      padding-left: 320px;
+
+      .eye-candy {
+        background-image: url('/assets/How_4.png');
+        width: 174px;
+        height: 161px;
+        top: 77px;
+        left: 68px;
+      }
+    }
+  }
+}
+
+
+.about-page, .how-it-works-page {
+  .eye-candy {
+    position: absolute;
+  }
+
+  section {
+    .how-it-works {
+      margin-left: 81px;
+      margin-top: 35px;
+    }
+
+    .marketing-point {
+      position: relative;
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 7px;
+      }
+
+      p {
+        width: 427px;
+        font-size: 16px;
+      }
+    }
+
+    .marketing-point:first-child {
+      background-image: none;
+    }
+
+
+    > div.why {
+      height: 207px;
+    }
+  }
+}
+
+header {
+  background-image: url('/assets/crossed_stripes.png');
+
+  .container {
+    height: 138px;
+    position: relative;
+  }
+
+  h1 {
+    background-image: url('/assets/Logo.png');
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 65px;
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+  }
+
+  h2 {
+    color: $header-color;
+    font-family: Helvetica;
+    font-weight: normal;
+    text-shadow: #494949 0 -1px;
+    padding-top: 58px;
+  }
+
+  h2, p {
+    margin-right: 300px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+
+  p {
+    color: $text-color;
+    font-family: Helvetica;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 15px;
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        color: $text-color;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: $text-color;
+        }
+      }
+
+      li + li:before {
+        content: " | ";
+      }
+    }
+  }
+
+  .eye-candy {
+    background-image: url('/assets/HP_Image.png');
+    height: 298px;
+    width: 157px;
+    position: absolute;
+    right: 52px;
+    bottom: -41px;
+  }
+}
+
+.contact-us-page section {
+  position: relative;
+
+  .got-a-question {
+    background-image: -webkit-radial-gradient(50% 97%, 150px 3%, #F0F0F0, white);
+    width: 509px;
+    margin-left: 82px;
+    padding-bottom: 101px;
+  }
+
+  h3 {
+    margin-top: 81px;
+    margin-bottom: 24px;
+  }
+
+  .we-love-feedback {
+    width: 132px;
+    height: 373px;
+    background-image: url('/assets/Contact.png');
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 191px;
+  }
+
+  form {
+    width: 509px;
+    margin-bottom: 0;
+
+    fieldset {
+      text-align: right;
+
+      padding: 9px;
+
+      input, textarea {
+        background-color: #DFDFDF;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        margin-bottom: 5px;
+      }
+
+      input[type=text], input[type=email], textarea {
+        width: 100%;
+      }
+
+      input[type=text], input[type=email], input[type=submit] {
+        height: 32px;
+      }
+
+      input[type=submit] {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.piece {
+  border: 1px solid #D8D8D8;
+
+  > * {
+    border: 6px solid $light-gray-color;
+    padding: 12px;
+  }
+}
+
+.create-account-page {
+  .create-account {
+    width: 349px;
+    margin-left: 290px;
+    margin-top: 69px;
+
+    form > div {
+      border: none;
+    }
+
+    fieldset {
+      padding: 20px 23px 20px 25px;
+
+      label {
+        color: $dark-gray-color;
+      }
+
+      input[type=email], input[type=password] {
+        width: 254px;
+      }
+
+      input[type=submit] {
+        @extend .button;
+        margin-top: 44px;
+        width: 172px;
+      }
+    }
+  }
+}
+
+.create-account-review-page {
+  .price {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  form {
+    margin-bottom: 0;
+  }
+
+  .helper {
+    font-size: 12px;
+    padding-bottom: 15px;
+    line-height: 14px;
+  }
+}
+
+.review-purchase-page, .create-account-review-page {
+  section .review-purchase {
+    margin-top: 69px;
+    margin-left: 132px;
+    color: $dark-gray-color;
+
+    .piece {
+      width: 664px;
+
+      > * {
+        padding: 25px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      font-size: 13px;
+
+      li {
+        border-bottom: 1px solid $light-gray-color;
+        padding-bottom: 2px;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .info {
+      display: table;
+      width: 602px;
+
+      .preview, .details {
+        vertical-align: bottom;
+      }
+
+      .preview {
+        display: table-cell;
+        width: 343px;
+        height: 249px;
+      }
+
+      .details {
+        display: table-cell;
+        padding-left: 20px;
+
+        .action {
+          @extend .button;
+          width: 123px;
+        }
+      }
+    }
+  }
+}
+
+.main-page {
+  header .container h1 {
+    margin-top: 0;
+  }
+
+  section {
+    ul.tempates:after, ul.templates:before {
+      content: "";
+      display: table;
+    }
+
+    ul.templates:after {
+      clear: both;
+    }
+
+    ul.templates {
+      margin: 0 0 0 -43px;
+      list-style: none;
+      zoom: 1;
+
+      li {
+        width: 283px;
+        float: left;
+        margin-bottom: 36px;
+        margin-left: 38px;
+
+        > div {
+          padding-bottom: 0;
+          background-color: #F8F8F8;
+
+          img {
+            width: 250px;
+            height: 180px;
+          }
+
+          h3 {
+            line-height: 11px;
+            font-size: 11px;
+            padding: 10px 0;
+            margin: 0;
+          }
+
+          p {
+            line-height: 14px;
+            font-size: 10px;
+            min-height: 105px;
+          }
+
+          .actions {
+            border-top: 1px solid #AFAFAF;
+            position: relative;
+            line-height: 51px;
+            text-align: right;
+
+            .price {
+              display: inline-block;
+              background-image: url('/assets/HP_Ribbon2.png');
+              background-repeat: no-repeat;
+              background-position: 0 0;
+              height: 45px;
+              width: 47px;
+              color: #FFF;
+              font-size: 18px;
+              line-height: 40px;
+              text-align: center;
+              margin-top: -1px;
+              margin-left: 8px;
+              float: left;
+            }
+
+            a {
+              @extend .button;
+              width: 46px;
+            }
+
+            a:last-child {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#banner{
+  height: 149px;
+  width: 149px;
+  overflow:hidden;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  z-index: 999999;
+  right: 0;
+  top: 0;
+
+  a {
+    display: block;
+    width: 190px;
+    font-size: 14px;
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT",
+      "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma,
+      Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;
+    background-color: #333;
+    color: #FFF;
+    word-spacing: 2px;
+    text-decoration: none;
+    padding: 5px 15px 5px 25px;
+
+    position:relative;
+    left: 20px;
+    top: -37px;
+    text-align: center;
+
+    -moz-transform-origin: 0 0 ;
+    -moz-transform:rotate(45deg);
+    -moz-box-shadow:    1px 1px 5px 1px #666;
+
+    -webkit-transform-origin: 0 0 ;
+    -webkit-transform:rotate(45deg);
+    -webkit-box-shadow: 1px 1px 5px 1px #666;
+
+    -ms-transform-origin: 0 0 ;
+    -ms-transform:rotate(45deg);
+    -ms-box-shadow: 1px 1px 5px 1px #666;
+
+    transform-origin: 0 0 ;
+    transform:rotate(45deg);
+    box-shadow: 1px 1px 5px 1px #666;
+
+    background-image: linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+    background-image: -o-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+    background-image: -moz-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+    background-image: -webkit-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+    background-image: -ms-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.03, #000000),
+      color-stop(0.05, #666666),
+      color-stop(0.07, #000000),
+      color-stop(0.93, #000000),
+      color-stop(0.95, #666666),
+      color-stop(0.97, #000000)
+    );
+
+  }
+}

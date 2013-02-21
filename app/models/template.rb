@@ -4,6 +4,8 @@ class Template
   field :wix_meta_site_id
   field :image_url
   field :price, type: BigDecimal
+  field :description
+  field :site_url
 
   def transfer_to(wix_user_id)
     WIX_API.post do |req|

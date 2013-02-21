@@ -1,3 +1,20 @@
-<h3> Create Wix.com Account </h3>
+<%= body_class 'create-account-page' %>
+<div class="subheader">
+</div>
 
-<%= render 'form' %>
+<section class="container">
+  <div class="create-account">
+    <h3>Create Wix.com Account</h3>
+    <%= form_for @wix_user, html: { class: 'piece' } do |f| %>
+      <fieldset>
+        <label>Email:</label>
+        <%= f.email_field :email %>
+        <%= errors_for(@wix_user.errors, :email) %>
+        <label>*Password:</label>
+        <%= f.password_field :password %>
+        <%= errors_for(@wix_user.errors, :password) %>
+        <%= f.submit 'Create Wix Account' %>
+      </fieldset>
+    <% end %>
+  </div>
+</section>
