@@ -35,17 +35,15 @@ h3 {
 
 .marketing-point {
   background-image: -webkit-radial-gradient(top, 450px 85px, #F0F0F0, white);
-  background-image: radial-gradient(top, 450px 85px, #F0F0F0, white);
+  background: radial-gradient(ellipse 450px 85px at top, #F0F0F0 0%, white 100%) repeat scroll 0% 0% transparent;
   padding-top: 60px;
 }
 
 .subheader {
   background-color: $light-gray-color;
-  border-width: 4px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  -webkit-border-image: url('/assets/h2_border.png') 4 0 stretch stretch;
+  border: none;
+  border-bottom: 4px solid transparent;
+  border-image: url('/assets/h2_border.png') 4 0 repeat;
   min-height: 65px;
 
   h2 {
