@@ -14,10 +14,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= content_for?(:body_class) ? yield(:body_class) : '' %>">
-  <div id="banner">
-    <a href="https://github.com/wix/template-store-example">Fork me on GitHub</a>
-  </div>
-
   <% flash.each do |name, msg| %>
     <% if msg.is_a?(String) %>
       <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
