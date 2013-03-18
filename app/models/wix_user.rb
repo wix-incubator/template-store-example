@@ -42,7 +42,7 @@ class WixUser
 
   def email_uniqueness
     if self.class.find_by_email(email)
-      errors.add(:email, "Alredy registered on wix.com")
+      errors.add(:email, "Already registered on wix.com")
     end
   end
 end
