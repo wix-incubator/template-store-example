@@ -25,7 +25,7 @@ class NotificationsController < ApplicationController
       end
     rescue Exception => e
       #log exceptions
-      Rails.logger.error("Exeption in PayPal Notifications: #{e.message}")
+      Rails.logger.error("Exception in PayPal Notifications: #{e.message}")
     end
   end
 end
