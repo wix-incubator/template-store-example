@@ -6,6 +6,7 @@ class Template
   field :price, type: BigDecimal
   field :description
   field :site_url
+  field :note
 
   def transfer_to(wix_user_id)
     WIX_API.post do |req|

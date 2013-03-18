@@ -518,7 +518,7 @@ header {
 
 .main-page {
   section {
-    ul.tempates:after, ul.templates:before {
+    ul.templates:after, ul.templates:before {
       content: "";
       display: table;
     }
@@ -549,15 +549,26 @@ header {
 
           h3 {
             line-height: 11px;
-            font-size: 11px;
+            font-size: 12px;
             padding: 10px 0;
             margin: 0;
+            color: $dark-gray-color;
+            font-weight: bold;
           }
 
           p {
             line-height: 14px;
-            font-size: 10px;
+            font-size: 11px;
             min-height: 105px;
+            position: relative;
+
+            .note {
+              font-size: 9px;
+              display: block;
+              position: absolute;
+              bottom: 0;
+            }
+
           }
 
           .actions {

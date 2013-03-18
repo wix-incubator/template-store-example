@@ -36,6 +36,7 @@
     description: 'Get in style and start selling your products with this simple, chic HTML Ecommerce template.',
     wix_meta_site_id: '12d268e1-731c-b2f9-736c-d6a0a98ed8e2',
     image_url: 'Fashion & Style.png',
+    note: "To activate the shopping cart for this template, you'll need to purchase the eCommerce premium package in Wix. For prices and more info <a href='http://www.wix.com/upgrade/website'>click here</a>",
     price: 20
   },
   {
