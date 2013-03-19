@@ -1,6 +1,6 @@
 paypal:
   account: test.paypal.account@domain.com
-  sendbox: true
+  sandbox: true
 wix_api:
   secret: _MY_SECRET_KEY_
-  public: _MY_PRUBLIC_KEY_
+  public: _MY_PUBLIC_KEY_
