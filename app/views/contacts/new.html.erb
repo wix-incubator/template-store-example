@@ -7,12 +7,12 @@
 <section class="container">
   <div class="got-a-question">
     <h3>Got a question?<br/>Want to get in touch?</h3>
-    <form class="piece">
+    <form class="piece" method="POST" action="/contact-us">
       <fieldset>
-        <input type="text" placeholder="Name"/>
-        <input type="email" placeholder="Email"/>
-        <input type="text" placeholder="Subject"/>
-        <textarea rows="6"></textarea>
+        <input type="text" placeholder="Name" name="contact[name]" />
+        <input type="email" placeholder="Email" name="contact[email]" />
+        <input type="text" placeholder="Subject" name="contact[subject]" />
+        <textarea rows="6" name="contact[body]"></textarea>
         <input type="submit" value="Send"/>
       </fieldset>
     </form>

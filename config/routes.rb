@@ -10,7 +10,8 @@ TsExample::Application.routes.draw do
   end
   get '/how-it-works', to: 'statics#how_it_works'
   get '/about', to: 'statics#about'
-  get '/contact-us', to: 'statics#contact_us'
+  get  '/contact-us', to: 'contacts#new'
+  post '/contact-us', to: 'contacts#create'
   get '/thank-you', to: 'statics#thank_you'
 
   root :to => 'templates#index'
