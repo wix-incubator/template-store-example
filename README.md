@@ -1,6 +1,7 @@
-### WIX Template Store
+WIX Template Store
+==================
 
-<br />
+
 If you want to have your own template store, just follow these simple steps:
 
 1. [Getting code](#getting-code)
@@ -38,6 +39,7 @@ $ heroku login
 ```
 
 and enter your credentials.
+
 3. Next go to the folder with template store and do
 
 ```bash
@@ -47,7 +49,7 @@ $ heroku apps:create
 
 inside.
 
-Then after you committed something just do
+Then once you changed templates and committed something just do
 
 ```bash
 
