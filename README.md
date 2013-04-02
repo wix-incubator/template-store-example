@@ -23,8 +23,7 @@ Next do whatever you want to customize your template store - HTML templates are 
 In case you are familiar with Rails you can just deploy like you want, it's just a Rails app.
 Otherwise we recommend to use [Heroku](heroku.com). For this just [register and follow their instructions](https://id.heroku.com/signup). After email confirmation you have to install [heroku toolbelt](https://toolbelt.heroku.com/) - command line utility to link your code with Heroku account. Then after you committed something just do ``git push heroku master`` to update/install your code on Heroku.
 
-Now execute this in console replacing _YOUR_KEYS with your real keys from api.wix.com:
-`heroku config:add WIX_SECRET_KEY=_YOUR_SECRET_KEY_`<br />
-`heroku config:add WIX_PUBLIC_KEY=_YOUR_PUBLIC_KEY_`
+Now execute this in console replacing _YOUR_SECRET_KEY_ and _YOUR_PUBLIC_KEY_ with your real keys from api.wix.com:
+`heroku config:add    WIX_SECRET_KEY=_YOUR_SECRET_KEY_    WIX_PUBLIC_KEY=_YOUR_PUBLIC_KEY_`
 
 This will update your Heroku application and restart it, so that in a minute you should have working template store!
