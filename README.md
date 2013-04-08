@@ -66,4 +66,12 @@ $ heroku config:add WIX_SECRET_KEY=_YOUR_SECRET_KEY_
 $ heroku config:add WIX_PUBLIC_KEY=_YOUR_PUBLIC_KEY_
 ```
 
+Same things should be done for setting your PayPal account:
+
+```bash
+
+$ heroku config:add PAYPAL_ACCOUNT=your_paypal_account@email.here
+$ heroku config:add PAYPAL_SANDBOX=false
+```
+
 This will update your Heroku application and restart it, so that in a minute you should have working template store!
