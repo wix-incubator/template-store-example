@@ -6,7 +6,8 @@ If you want to have your own template store, just follow these simple steps:
 
 1. [Getting code](#getting-code)
 2. [Getting API wix.com keys](#keys)
-3. [Publishing your site](#deploy)
+3. [Selecting your templates with prices, descriptions](#select-templates)
+4. [Publishing your site](#deploy)
 
 
 #### Getting code<a id="getting-code"></a>
@@ -24,6 +25,17 @@ Now go to [api.wix.com](http://api.wix.com) and signup to get the keys. You'll g
 
 
 Next do whatever you want to customize your template store - HTML templates are in *app/views*, JS/CSS assets are in *app/assets*.
+
+#### Selecting your templates<a id="select-templates"></a>
+
+Go to api.wix.com and add your linked WIX.com account. Once you did it and if you have at least one site, you'll see new ["Templates"](http://api.wix.com/templates) link in navigation menu. There will be a list of templates taken from your WIX accounts. Specify descriptions and prices, make sure "Include?" checkboxes are enabled and click "Generate" to get your templates file. Copy this file in your _config_ folder and commit it like that:
+
+```bash
+
+$ git add config/templates.yml
+$ git commit -m "Templates.yml added" config/templates.yml
+$ git push heroku master
+```
 
 
 #### Publishing your site<a id="deploy"></a>
@@ -57,6 +69,20 @@ $ git push heroku master
 ```
 
 to update/install your code on Heroku.
+
+To populate your database with the list of selected template, you need to execute the following command:
+
+```bash
+
+$ RAILS_ENV=production rake db:seed
+```
+
+in case you use Heroku do this instead:
+
+```bash
+
+$ heroku run rake db:seed RAILS_ENV=production
+```
 
 Now execute this in console replacing _YOUR_SECRET_KEY_ and _YOUR_PUBLIC_KEY_ with your real keys from api.wix.com:
 
