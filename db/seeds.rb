@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-[
+templates = [
   {
     name: 'Financial Consultants',
     site_url: 'http://templatesdream.wix.com/consulting-and-co',
@@ -103,6 +103,13 @@
     image_url: 'Singer Songwriter.png',
     price: 12
   },
-].each do |template_raw|
+]
+
+templates_config = Rails.root.join('config','templates.yml')
+if File.exists?(templates_config)
+  templates = YAML.load_file(templates_config)
+end
+
+templates.each do |template_raw|
   Template.create(template_raw)
 end
