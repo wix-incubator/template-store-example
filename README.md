@@ -11,7 +11,7 @@ If you want to have your own template store, just follow these simple steps:
 
 
 #### Getting code<a id="getting-code"></a>
-Get our sample code from GitHub. You need to have account on github.com and [git client for your computer](http://git-scm.com/downloads). To get our template store you need to do
+Get our sample code from GitHub. You need to have [git client for your computer](http://git-scm.com/downloads). To get our template store you need to do
 
 ```bash
 
