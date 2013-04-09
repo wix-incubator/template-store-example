@@ -28,7 +28,7 @@ Next do whatever you want to customize your template store - HTML templates are 
 
 #### Selecting your templates<a id="select-templates"></a>
 
-Go to api.wix.com and add your linked WIX.com account. Once you did it and if you have at least one site, you'll see new ["Templates"](http://api.wix.com/templates) link in navigation menu. There will be a list of templates taken from your WIX accounts. Specify descriptions and prices, make sure "Include?" checkboxes are enabled and click "Generate" to get your templates file. Copy this file in your _config_ folder and commit it like that:
+Go to http://api.wix.com and add your linked WIX.com account. Once you did it and if you have at least one site, you'll see new ["Templates"](http://api.wix.com/templates) link in navigation menu. There will be a list of templates taken from your WIX accounts. Specify descriptions and prices, make sure "Include?" checkboxes are enabled and click "Generate" to get your templates file. Copy this file in your _config_ folder and commit it like that:
 
 ```bash
 
@@ -39,7 +39,7 @@ $ git push heroku master
 
 #### Publishing your site<a id="deploy"></a>
 In case you are familiar with Rails you can just deploy like you want, it's just a Rails app.
-Otherwise we recommend to use [Heroku](heroku.com).
+Otherwise we recommend to use [Heroku](https://www.heroku.com).
 
 1. For this just [register and follow their instructions](https://id.heroku.com/signup).
 2. After email confirmation you have to install [heroku toolbelt](https://toolbelt.heroku.com/) - command line utility to link your code with Heroku account. Do
