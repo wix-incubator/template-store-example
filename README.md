@@ -32,7 +32,6 @@ Go to api.wix.com and add your linked WIX.com account. Once you did it and if yo
 
 ```bash
 
-$ git add config/templates.yml
 $ git commit -m "Templates.yml added" config/templates.yml
 $ git push heroku master
 ```
