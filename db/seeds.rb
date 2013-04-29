@@ -36,7 +36,7 @@ templates = [
     description: 'Get in style and start selling your products with this simple, chic HTML Ecommerce template.',
     wix_meta_site_id: '12ed68a7-a0c0-76fb-5382-7c5648f90a5e',
     image_url: 'Fashion & Style.png',
-    note: "To activate the shopping cart for this template, you'll need to purchase the eCommerce premium package in Wix. For prices and more info <a href='http://www.wix.com/upgrade/website'>click here</a>",
+    note: "To activate the shopping cart for this template, you'll need to purchase the eCommerce premium package in Wix. For prices and more info <a target='_blank' href='http://www.wix.com/upgrade/website'>click here</a>",
     price: 20
   },
   {
