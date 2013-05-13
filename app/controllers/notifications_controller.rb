@@ -17,7 +17,7 @@ class NotificationsController < ApplicationController
 
       if notify.acknowledge
         if notify.complete? and @purchase.template.price == BigDecimal.new( params[:mc_gross] )
-          # Bussiness logic
+          # Business logic
           @purchase.template.transfer_to(@purchase.wix_user_id)
           @purchase.update_attributes(:paid => true)
           render :nothing => true
