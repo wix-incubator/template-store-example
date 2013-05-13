@@ -11,7 +11,7 @@ class Template
   def transfer_to(wix_user_id)
     WIX_API.post do |req|
       req.url '/api/v1/transfers'
-      req.body = { site_id: wix_meta_site_id, to_user_id: wix_user_id }.to_query
+      req.body = { site_id: wix_meta_site_id, to_user_id: wix_user_id, name: name }.to_query
     end
   end
 end
