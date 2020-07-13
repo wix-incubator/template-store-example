@@ -31,7 +31,7 @@ group :development, :test do
 end
 
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 3.1.3'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
