@@ -11,7 +11,7 @@ gem "mongoid"
 gem 'faraday'
 gem 'warden-hmac-authentication', :git => 'git://github.com/fxposter/warden-hmac-authentication.git'
 gem "rails_config"
-gem 'activemerchant'
+gem 'activemerchant', '>= 1.28.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
